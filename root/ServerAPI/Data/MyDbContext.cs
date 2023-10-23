@@ -7,11 +7,7 @@ namespace ServerAPI.Data
     //Class makes DataBase
     public class MyDbContext : DbContext
     {
-        public MyDbContext(DbContextOptions<MyDbContext> options)
-           :base(options)
-        {
-
-        }
+        public MyDbContext(){}
         public DbSet<MUser> Users { get; set; }
         public DbSet<MUserInfo> UsersInfo { get; set; }
         public DbSet<MTotalGameSettings> TotalGameSettings { get; set; }
@@ -22,7 +18,7 @@ namespace ServerAPI.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string connectionString = "Server=(localdb)\\mssqllocaldb;Database=rpsDB;Trusted_Connection=True;MultipleActiveResultSets=true";
+            string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=rpsDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
             optionsBuilder.UseSqlServer(connectionString);
         }
     }
