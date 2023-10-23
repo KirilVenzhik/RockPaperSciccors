@@ -1,0 +1,11 @@
+C:\Users\kiril\Work-git\Rock-Paper-Scissors-project\RockPaperSciccors\root\ServerAPI\obj\Release\net6.0\PubTmp\Out\ServerAPI.exe
+C:\Users\kiril\Work-git\Rock-Paper-Scissors-project\RockPaperSciccors\root\ServerAPI\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
+C:\Users\kiril\Work-git\Rock-Paper-Scissors-project\RockPaperSciccors\root\ServerAPI\obj\Release\net6.0\PubTmp\Out\appsettings.json
+C:\Users\kiril\Work-git\Rock-Paper-Scissors-project\RockPaperSciccors\root\ServerAPI\obj\Release\net6.0\PubTmp\Out\ServerAPI.dll
+C:\Users\kiril\Work-git\Rock-Paper-Scissors-project\RockPaperSciccors\root\ServerAPI\obj\Release\net6.0\PubTmp\Out\ServerAPI.deps.json
+C:\Users\kiril\Work-git\Rock-Paper-Scissors-project\RockPaperSciccors\root\ServerAPI\obj\Release\net6.0\PubTmp\Out\ServerAPI.runtimeconfig.json
+C:\Users\kiril\Work-git\Rock-Paper-Scissors-project\RockPaperSciccors\root\ServerAPI\obj\Release\net6.0\PubTmp\Out\ServerAPI.pdb
+C:\Users\kiril\Work-git\Rock-Paper-Scissors-project\RockPaperSciccors\root\ServerAPI\obj\Release\net6.0\PubTmp\Out\Microsoft.OpenApi.dll
+C:\Users\kiril\Work-git\Rock-Paper-Scissors-project\RockPaperSciccors\root\ServerAPI\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\kiril\Work-git\Rock-Paper-Scissors-project\RockPaperSciccors\root\ServerAPI\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\kiril\Work-git\Rock-Paper-Scissors-project\RockPaperSciccors\root\ServerAPI\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll
