@@ -1,5 +1,0 @@
-C:\Users\kiril\Work-git\Rock-Paper-Scissors-project\RockPaperSciccors\root\RockPaperScissorsDB\GameDB\obj\Debug\net6.0\GameDB.csproj.AssemblyReference.cache
-C:\Users\kiril\Work-git\Rock-Paper-Scissors-project\RockPaperSciccors\root\RockPaperScissorsDB\GameDB\obj\Debug\net6.0\GameDB.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\kiril\Work-git\Rock-Paper-Scissors-project\RockPaperSciccors\root\RockPaperScissorsDB\GameDB\obj\Debug\net6.0\GameDB.AssemblyInfoInputs.cache
-C:\Users\kiril\Work-git\Rock-Paper-Scissors-project\RockPaperSciccors\root\RockPaperScissorsDB\GameDB\obj\Debug\net6.0\GameDB.AssemblyInfo.cs
-C:\Users\kiril\Work-git\Rock-Paper-Scissors-project\RockPaperSciccors\root\RockPaperScissorsDB\GameDB\obj\Debug\net6.0\GameDB.csproj.CoreCompileInputs.cache

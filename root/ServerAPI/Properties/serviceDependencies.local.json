@@ -4,7 +4,7 @@
       "serviceConnectorResourceId": "",
       "secretStore": "LocalSecretsFile",
       "type": "mssql.local",
-      "connectionId": "connStr",
+      "connectionId": "connectionString",
       "dynamicId": null
     }
   }

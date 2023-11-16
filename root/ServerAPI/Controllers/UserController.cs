@@ -1,37 +1,50 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using ServerAPI.Data;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
+using ServerAPI.Dto;
 using ServerAPI.Entityes;
+using ServerAPI.Interfaces;
 
 namespace ServerAPI.Controllers
 {
+    [Route("api/[controller]")]
     [ApiController]
-    [Route("controller")]
     public class UserController : Controller
     {
-        private readonly ILogger<UserController> _logger;
+        private readonly IUserRepository _userRepository;
+        private readonly IMapper _mapper;
 
-        public UserController(ILogger<UserController> logger)
+        public UserController(IUserRepository userRepository, IMapper mapper)
         {
-            _logger = logger;
+            _userRepository = userRepository;
+            _mapper = mapper;
         }
 
-        [HttpGet(Name = "GetUser")]
-        public IEnumerable<MUser> Get()
+        [HttpGet]
+        [ProducesResponseType(200, Type = typeof(IEnumerable<User>))]
+        public IActionResult GetUsers()
         {
-            using (var db = new MyDbContext())
-            {
-                var userData = db.Users.ToList();
-                return userData.Select(index => new MUser
-                {
-                    Id = index.Id,
-                    Gmail = index.Gmail,
-                    Nickname = index.Nickname,
-                    Password = index.Password,
-                    UserInfo = index.UserInfo,
-                })
-                .ToArray();
-            }
+            var users = _mapper.Map<List<UserDto>>(_userRepository.GetUsers());
+
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            return Ok(users);
+        }
+
+        [HttpGet("{userId}")]
+        [ProducesResponseType(200, Type = typeof(IEnumerable<User>))]
+        [ProducesResponseType(400)]
+        public IActionResult GetUser(int userId)
+        {
+            if (!_userRepository.UserExists(userId))
+                return NotFound();
+
+            var user = _mapper.Map<UserDto>(_userRepository.GetUser(userId));
+
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            return Ok(user);
         }
     }
 }
