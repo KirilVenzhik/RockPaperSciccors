@@ -135,6 +135,12 @@ namespace ServerAPI.Controllers
 
             var eventToDelete = _eventRepository.GetGameEvent(eventId);
 
+            if(_eventRepository.GetGamesByEventId(eventId).Any())
+            {
+                ModelState.AddModelError("", "Unable to delete while games with this event is in progress.");
+                return StatusCode(400, ModelState);
+            }
+
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 

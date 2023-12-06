@@ -157,9 +157,24 @@ namespace ServerAPI.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
+            //создать проверку на то, существует ли игра сейчас в этой комнате.
+            if (_gameRoomRepository.GetGameByRoomId(roomId) != null)
+            {
+                ModelState.AddModelError("", "Unable to delete while the game is in progress.");
+                return StatusCode(400, ModelState);
+            }
+
+            //переписать код так что бы создавалась проверка на то, есть ли юзеры в комнатах
+            /*
             var users = _userRepository.GetUsers().Where(u => u.GameRoom.Id == roomId).ToList();
             foreach (var user in users)
                 user.GameRoom = null;
+            */
+            if(_gameRoomRepository.GetUsersInRoom(roomId).Any())
+            {
+                ModelState.AddModelError("", "Unable to delete while users are in the room.");
+                return StatusCode(400, ModelState);
+            }
 
             if (!_gameRoomRepository.DeleteRoom(roomToDelete))
             {

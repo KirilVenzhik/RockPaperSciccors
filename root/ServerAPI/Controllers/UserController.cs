@@ -115,6 +115,12 @@ namespace ServerAPI.Controllers
 
             var userToDelete = _userRepository.GetUser(userId);
 
+            if (userToDelete.GameRoom != null)
+            {
+                ModelState.AddModelError("", "Unable to delete while user is in the room.");
+                return StatusCode(400, ModelState);
+            }
+
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
