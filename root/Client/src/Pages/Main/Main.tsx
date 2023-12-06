@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { AnonymousForm } from "./AnonymousForm";
 import { AuthForm } from "./AuthForm";
+import { useTranslation } from 'react-i18next';
+import * as Images from "../../Images/useImage";
+import { LanguageSwitcher } from "../../Components/LanguageSwitcher";
 
 export const Main = () => {
     const [isAuth, setIsAuth] = useState(false);
@@ -12,12 +15,16 @@ export const Main = () => {
     const handleAuth = () => {
         setIsAuth(true);
     };
+
+    const { t } = useTranslation();
     
     return (
         <div className="grid-container">
             <div className="grid-item1"> {/* grid up */}
+                <LanguageSwitcher />
+                <p>{t('greeting')}</p>
                 <button className="Change-lang">
-                    <img src="lang-logo.jpg" alt="Lang" />
+                    <img src={Images.Language} alt="Lang" />
                     UKR
                 </button>
                 <div className="Logo-name">
