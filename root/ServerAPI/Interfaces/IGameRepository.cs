@@ -4,9 +4,23 @@ namespace ServerAPI.Interfaces
 {
     public interface IGameRepository
     {
-        public ICollection<Game> GetGames();
-        public Game GetGame(int gameId);
-        public GameEvent GetGameEventByGameId(int gameId);
-        public bool GameExists(int gameId);
+        // GET
+        ICollection<Game> GetGames();
+        Game GetGame(int gameId);
+        GameEvent GetGameEventByGameId(int gameId);
+
+        // POST
+        bool CreateGame(int roomId, int eventId, Game createGame);
+
+        // PUT
+        bool UpdateGame(int gameId, Game updateGame);
+
+        // DELETE
+        bool DeleteGame(Game deleteGame);
+        bool DeleteGames(List<Game> deleteGames);
+
+        // Other
+        bool GameExists(int gameId);
+        bool Save();
     }
 }

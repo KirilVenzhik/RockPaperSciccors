@@ -25,18 +25,12 @@ namespace ServerAPI.Migrations
             modelBuilder.Entity("ServerAPI.Entityes.Game", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int>("GEventId")
                         .HasColumnType("int");
 
                     b.Property<int?>("Losers")
-                        .HasColumnType("int");
-
-                    b.Property<int>("RoomId")
                         .HasColumnType("int");
 
                     b.Property<int?>("Winner")
@@ -45,8 +39,6 @@ namespace ServerAPI.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("GEventId");
-
-                    b.HasIndex("RoomId");
 
                     b.ToTable("Games");
                 });
@@ -61,10 +53,6 @@ namespace ServerAPI.Migrations
 
                     b.Property<int>("CardsToOneHand")
                         .HasColumnType("int");
-
-                    b.Property<string>("EventName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Rounds")
                         .HasColumnType("int");
@@ -140,8 +128,8 @@ namespace ServerAPI.Migrations
                         .IsRequired();
 
                     b.HasOne("ServerAPI.Entityes.GameRoom", "Room")
-                        .WithMany("Games")
-                        .HasForeignKey("RoomId")
+                        .WithOne("Game")
+                        .HasForeignKey("ServerAPI.Entityes.Game", "Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -166,7 +154,7 @@ namespace ServerAPI.Migrations
 
             modelBuilder.Entity("ServerAPI.Entityes.GameRoom", b =>
                 {
-                    b.Navigation("Games");
+                    b.Navigation("Game");
 
                     b.Navigation("Users");
                 });

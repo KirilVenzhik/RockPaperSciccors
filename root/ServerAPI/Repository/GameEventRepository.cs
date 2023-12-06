@@ -1,4 +1,5 @@
-﻿using ServerAPI.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using ServerAPI.Data;
 using ServerAPI.Entityes;
 using ServerAPI.Interfaces;
 
@@ -13,6 +14,7 @@ namespace ServerAPI.Repository
             _context = context;
         }
 
+        // GET
         public ICollection<GameEvent> GetGameEvents()
         {
             return _context.GameEvents.ToList();
@@ -23,6 +25,14 @@ namespace ServerAPI.Repository
             return _context.GameEvents.FirstOrDefault(e => e.Id == eventId);
         }
 
+        public GameEvent GetEventByGameId(int gameId)
+        {
+            return _context.Games
+                .Where(g => g.Id == gameId)
+                .Select(e => e.GEvent)
+                .FirstOrDefault();
+        }
+
         public ICollection<Game> GetGamesByEventId(int eventId)
         {
             return _context.Games
@@ -30,9 +40,40 @@ namespace ServerAPI.Repository
                 .ToList();
         }
 
-        public bool GameEventExists(int id)
+        // POST
+        public bool CreateGameEvent(GameEvent gameEvent)
         {
-            return _context.GameEvents.Any(e => e.Id == id);
+            var saved = _context.Add(gameEvent);
+            return Save();
+        }
+
+        // PUT
+        public bool UpdateEvent(int eventId, GameEvent updateEvent)
+        {
+            var saved = _context.Update(updateEvent);
+            return Save();
+        }
+
+        // DELETE
+        public bool DeleteEvent(GameEvent deleteEvent)
+        {
+            _context.Remove(deleteEvent);
+            return Save();
+        }
+        public bool DeleteEvents(List<GameEvent> deleteEvents)
+        {
+            _context.RemoveRange(deleteEvents);
+            return Save();
+        }
+
+        // Other
+        public bool GameEventExists(int eventId)
+        {
+            return _context.GameEvents.Any(e => e.Id == eventId);
+        }
+        public bool Save()
+        {
+            return _context.SaveChanges() > 0;
         }
     }
 }

@@ -13,5 +13,13 @@ namespace ServerAPI.Data
         public DbSet<GameRoom> GameRooms { get; set; }
         public DbSet<GameEvent> GameEvents { get; set; }
         public DbSet<Game> Games { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<GameRoom>()
+                .HasOne(r => r.Game)
+                .WithOne(g => g.Room)
+                .HasForeignKey<Game>(g => g.Id);
+        }
     }
 }

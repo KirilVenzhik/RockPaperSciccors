@@ -38,14 +38,12 @@ namespace ServerAPI
                 {
                     new GameEvent()
                     {
-                        EventName = "Classic",
                         Rounds = 3,
                         CardsToOneHand = 3,
                         TimePerRound = 60
                     },
                     new GameEvent()
                     {
-                        EventName = "Rates are Rising",
                         Rounds = 3,
                         CardsToOneHand = 2,
                         TimePerRound = 30

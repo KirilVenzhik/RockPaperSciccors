@@ -4,6 +4,7 @@ using ServerAPI;
 using ServerAPI.Data;
 using ServerAPI.Interfaces;
 using ServerAPI.Repository;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
