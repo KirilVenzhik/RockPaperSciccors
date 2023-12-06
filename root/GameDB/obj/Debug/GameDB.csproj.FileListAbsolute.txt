@@ -1,2 +1,0 @@
-C:\Users\kiril\Work-git\Rock-Paper-Scissors-project\RockPaperSciccors\root\GameDB\obj\Debug\GameDB.csproj.AssemblyReference.cache
-C:\Users\kiril\Work-git\Rock-Paper-Scissors-project\RockPaperSciccors\root\GameDB\obj\Debug\GameDB.csproj.CoreCompileInputs.cache
