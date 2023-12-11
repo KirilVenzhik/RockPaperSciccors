@@ -23,6 +23,19 @@ builder.Services.AddDbContext<DataContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
+var provider = builder.Services.BuildServiceProvider();
+var configuration = provider.GetRequiredService<IConfiguration>();
+
+builder.Services.AddCors(options =>
+{
+    var frontedURL = configuration.GetValue<string>("frontend_url");
+
+    options.AddDefaultPolicy(builder =>
+    {
+        builder.WithOrigins(frontedURL).AllowAnyMethod().AllowAnyHeader();
+    });
+});
+
 var app = builder.Build();
 
 if (args.Length == 1 && args[0].ToLower() == "seeddata")
@@ -45,6 +58,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors();
 
 app.UseAuthorization();
 
