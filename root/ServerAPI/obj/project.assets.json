@@ -744,6 +744,9 @@
           "Microsoft.AspNetCore.App"
         ]
       },
+      "Node.js/5.3.0": {
+        "type": "package"
+      },
       "Swashbuckle.AspNetCore/6.5.0": {
         "type": "package",
         "dependencies": {
@@ -2508,6 +2511,24 @@
         "nlog.web.aspnetcore.nuspec"
       ]
     },
+    "Node.js/5.3.0": {
+      "sha512": "WebrKeV0cXE4TaYriZQfDRNO/UMYnlQgR/CrHEx4kLgiRsY6F0Ve2UVS7qDHQHAjj/KXo3ygJY6HDhf91hwJDw==",
+      "type": "package",
+      "path": "node.js/5.3.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/.bin/node.cmd",
+        "node.exe",
+        "node.js.5.3.0.nupkg.sha512",
+        "node.js.nuspec",
+        "readme.txt",
+        "tools/bin_tools.ps1",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    },
     "Swashbuckle.AspNetCore/6.5.0": {
       "sha512": "FK05XokgjgwlCI6wCT+D4/abtQkL1X1/B9Oas6uIwHFmYrIO9WUD5aLC9IzMs9GnHfUXOtXZ2S43gN1mhs5+aA==",
       "type": "package",
@@ -3499,27 +3520,28 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.12",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.12",
       "NLog.Web.AspNetCore >= 5.3.5",
+      "Node.js >= 5.3.0",
       "Swashbuckle.AspNetCore >= 6.5.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kiril\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "D:\\Programs\\VStudio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kiril\\Work-git\\Rock-Paper-Scissors-project\\RockPaperSciccors\\root\\ServerAPI\\ServerAPI.csproj",
+      "projectUniqueName": "C:\\Users\\User\\gitpro\\RockPaperSciccors\\root\\ServerAPI\\ServerAPI.csproj",
       "projectName": "ServerAPI",
-      "projectPath": "C:\\Users\\kiril\\Work-git\\Rock-Paper-Scissors-project\\RockPaperSciccors\\root\\ServerAPI\\ServerAPI.csproj",
-      "packagesPath": "C:\\Users\\kiril\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kiril\\Work-git\\Rock-Paper-Scissors-project\\RockPaperSciccors\\root\\ServerAPI\\obj\\",
+      "projectPath": "C:\\Users\\User\\gitpro\\RockPaperSciccors\\root\\ServerAPI\\ServerAPI.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\gitpro\\RockPaperSciccors\\root\\ServerAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "D:\\Programs\\VStudio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\kiril\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3579,6 +3601,10 @@
             "target": "Package",
             "version": "[5.3.5, )"
           },
+          "Node.js": {
+            "target": "Package",
+            "version": "[5.3.0, )"
+          },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[6.5.0, )"
@@ -3603,7 +3629,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

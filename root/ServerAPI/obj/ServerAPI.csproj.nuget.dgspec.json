@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kiril\\Work-git\\Rock-Paper-Scissors-project\\RockPaperSciccors\\root\\ServerAPI\\ServerAPI.csproj": {}
+    "C:\\Users\\User\\gitpro\\RockPaperSciccors\\root\\ServerAPI\\ServerAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kiril\\Work-git\\Rock-Paper-Scissors-project\\RockPaperSciccors\\root\\ServerAPI\\ServerAPI.csproj": {
+    "C:\\Users\\User\\gitpro\\RockPaperSciccors\\root\\ServerAPI\\ServerAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kiril\\Work-git\\Rock-Paper-Scissors-project\\RockPaperSciccors\\root\\ServerAPI\\ServerAPI.csproj",
+        "projectUniqueName": "C:\\Users\\User\\gitpro\\RockPaperSciccors\\root\\ServerAPI\\ServerAPI.csproj",
         "projectName": "ServerAPI",
-        "projectPath": "C:\\Users\\kiril\\Work-git\\Rock-Paper-Scissors-project\\RockPaperSciccors\\root\\ServerAPI\\ServerAPI.csproj",
-        "packagesPath": "C:\\Users\\kiril\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kiril\\Work-git\\Rock-Paper-Scissors-project\\RockPaperSciccors\\root\\ServerAPI\\obj\\",
+        "projectPath": "C:\\Users\\User\\gitpro\\RockPaperSciccors\\root\\ServerAPI\\ServerAPI.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\gitpro\\RockPaperSciccors\\root\\ServerAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "D:\\Programs\\VStudio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\kiril\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -77,6 +77,10 @@
               "target": "Package",
               "version": "[5.3.5, )"
             },
+            "Node.js": {
+              "target": "Package",
+              "version": "[5.3.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"
@@ -101,7 +105,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
