@@ -26,6 +26,10 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Client", "Client\", "{17D1E
 		SlnRelativePath = "Client\"
 	EndProjectSection
 EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "web", "Web\web.esproj", "{5C8BBA17-A8C4-46DE-93FB-1150220B6F7C}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "webapp", "WebApp\webapp.esproj", "{4DAB5C50-B5F6-44B7-BA9A-3D9599A27A37}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +44,18 @@ Global
 		{17D1E4A0-86C6-4E8E-BDDA-A2A9D6884311}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17D1E4A0-86C6-4E8E-BDDA-A2A9D6884311}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{17D1E4A0-86C6-4E8E-BDDA-A2A9D6884311}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{5C8BBA17-A8C4-46DE-93FB-1150220B6F7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C8BBA17-A8C4-46DE-93FB-1150220B6F7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C8BBA17-A8C4-46DE-93FB-1150220B6F7C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{5C8BBA17-A8C4-46DE-93FB-1150220B6F7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C8BBA17-A8C4-46DE-93FB-1150220B6F7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C8BBA17-A8C4-46DE-93FB-1150220B6F7C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{4DAB5C50-B5F6-44B7-BA9A-3D9599A27A37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DAB5C50-B5F6-44B7-BA9A-3D9599A27A37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DAB5C50-B5F6-44B7-BA9A-3D9599A27A37}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4DAB5C50-B5F6-44B7-BA9A-3D9599A27A37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DAB5C50-B5F6-44B7-BA9A-3D9599A27A37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DAB5C50-B5F6-44B7-BA9A-3D9599A27A37}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
