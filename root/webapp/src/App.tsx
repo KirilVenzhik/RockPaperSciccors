@@ -10,7 +10,7 @@ import i18n from './Components/Language'
 
 function App() {
     useEffect(() => {
-        axios.get('').then((response: AxiosResponse<any>) => {
+        axios.get('https://localhost:7284/api/Game').then((response: AxiosResponse<any>) => {
             console.log(response.data)
         })
     }, [])
